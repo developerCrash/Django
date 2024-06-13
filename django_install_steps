@@ -1,0 +1,22 @@
+Below are the steps to install Django.
+By creating venv, it becomes very easy to install Django and run the server. So always follow below steps hereafter
+
+Here is the solution to your problem: You can do this using virtualenv. step by step
+1. py -m pip install --user virtualenv
+2. py -m venv env
+3. .\env\Scripts\activate
+4. python -m pip install Django
+
+check version:
+5. python -m django --version
+
+start project Command:
+6.django-admin startproject mysite
+
+  
+start app Command:
+7.python manage.py startapp myapp
+
+now you can run project:
+8.python manage.py runserver
+http://127.0.0.1:8000/
