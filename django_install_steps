@@ -106,3 +106,32 @@ Replace: {% static 'js/
 
 search: .js
 Replace: .js' %}
+
+26. Replace all image references with static dir references 
+
+Search: images/
+Replace: {% static 'images/
+
+search: .png
+Replace: .png' %}
+
+search: .jpg
+Replace: .jpg' %}
+
+search: .svg
+Replace: .svg' %}
+
+Do this in all the html files 
+
+27. Create urls for all the available html pages
+
+>>> urls.py and corresponding view in views.py 
+
+
+28. Replace all the .html file references in all the html files with the urls
+Example: 
+
+Serach: index.html 
+Replace: {% url 'home' %}
+
+Do this in all the html files
