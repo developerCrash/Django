@@ -23,10 +23,35 @@ http://127.0.0.1:8000/
 
 9. Create views.py and models.py in Parent app
 
-10. Create urls.py in child app 
+10. Create urls.py, forms.py in child app 
 
-11. create static and templates directory 
+11. create static, media and templates directory 
 
 12. create BASE directory in templates directory (templates/BASE)
 
 13. create 'services' directory in templates folder (templates/services ---> services name should match the app name)
+
+14. Add following line to settings.py 
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [TEMPLATE_DIR], <<<<<<<<-------------------
+        'APP_DIRS': True,
+        'OPTIONS': {
+
+
+STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+Migrate models as database tabels 
+15. python manage.py migrate 
+
+Create Super User 
+16. python manage.py createsuperuser 
+
+17. Download the template and copy paste the html files into templates directory 
+18. Copy and paste css and javascript files to static directory 
