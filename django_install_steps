@@ -32,6 +32,8 @@ http://127.0.0.1:8000/
 13. create 'services' directory in templates folder (templates/services ---> services name should match the app name)
 
 14. Add following line to settings.py 
+>>> Add the app names in the installed apps section
+
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
