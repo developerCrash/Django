@@ -55,3 +55,54 @@ Create Super User
 
 17. Download the template and copy paste the html files into templates directory 
 18. Copy and paste css and javascript files to static directory 
+
+19. copy and paste the header and footer section from index.html into templates/BASE/base.html
+
+20. Copy and paste the navbar section in index.html into templates/BASE/navbar.html 
+
+21. Delete the header and navbar section from all the html pages.
+
+22. add {% load static %} in the first line of base.html page
+
+23. In base.html file after the body tag, paste the below lines
+
+    {% include 'BASE/navbar.html' %}
+        <!-- Navigation-->
+
+        {% block content %}
+
+        {% endblock %}
+
+24. In all the html pages other than base.html and navbar.html, paste the following lines on the start of the first line
+
+{% extends 'BASE/base.html' %}
+{% load static %}
+{% block content %}
+
+
+and paste the below line at the end of the file 
+{% endblock %}
+
+25. Replace all the css and javascript references in base.htl to include the static files 
+Example:
+  <link href=" {% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <link href=" {% static 'css/style.css' %}" rel="stylesheet" />
+  <link href=" {% static 'css/responsive.css' %}" rel="stylesheet" />
+
+  <script src=" {% static 'js/scripts.js' %}"></script>
+
+
+in alternate ways, replace all the css references as below
+
+Search: css/
+Replace: {% static 'css/
+
+search: .css
+Replace: .css' %}
+
+
+Search: js/
+Replace: {% static 'js/
+
+search: .js
+Replace: .js' %}
