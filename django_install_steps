@@ -20,3 +20,13 @@ start app Command:
 now you can run project:
 8.python manage.py runserver
 http://127.0.0.1:8000/
+
+9. Create views.py and models.py in Parent app
+
+10. Create urls.py in child app 
+
+11. create static and templates directory 
+
+12. create BASE directory in templates directory (templates/BASE)
+
+13. create 'services' directory in templates folder (templates/services ---> services name should match the app name)
